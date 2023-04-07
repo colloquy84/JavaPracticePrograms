@@ -1,4 +1,4 @@
-package com.pandeyarun.user.info;
+package com.pandeyarun.info;
 
 import com.pandeyarun.db.ConnDB;
 import com.pandeyarun.user.User;

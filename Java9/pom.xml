@@ -55,7 +55,7 @@
                         <argument>--module-path</argument>
                         <modulepath/>
                         <argument>--module</argument>
-                        <argument>info/info.pandeyarun.com.InfoUser</argument>
+                        <argument>info/info.com.pandeyarun.user.InfoUser</argument>
                     </arguments>
                 </configuration>
             </plugin>

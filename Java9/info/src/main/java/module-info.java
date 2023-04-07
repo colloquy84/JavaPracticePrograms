@@ -3,8 +3,7 @@
  */
 
 module info {
-    requires log4j.core;
-    requires log4j.api;
+    requires org.apache.logging.log4j;
     requires java.sql;
     requires user;
     requires database;

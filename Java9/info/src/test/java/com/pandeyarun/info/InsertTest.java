@@ -1,4 +1,4 @@
-package com.pandeyarun.user.info.com.pandeyar.info;
+package com.pandeyarun.info;
 /*
  * Created by pandeyar on 07/12/2017
  */
@@ -9,7 +9,7 @@ import org.junit.Test;
 
 import java.util.List;
 
-import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertEquals;
 
 public class InsertTest {
 
@@ -18,6 +18,6 @@ public class InsertTest {
         ConnDB.instance().insertWithStatement(new User("Arun", "Pandey",
                 "Expert Software Consultant", 33));
         List<String> result = ConnDB.instance().getUsers();
-        assertFalse(result.isEmpty());
+        assertEquals(1, result.size());
     }
 }

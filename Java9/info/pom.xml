@@ -3,7 +3,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>java9</artifactId>
+        <artifactId>Java9</artifactId>
         <groupId>com.pandeyarun</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
@@ -15,12 +15,12 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.pandeyar</groupId>
+            <groupId>com.pandeyarun</groupId>
             <artifactId>database</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>com.pandeyar</groupId>
+            <groupId>com.pandeyarun</groupId>
             <artifactId>user</artifactId>
             <version>${project.version}</version>
         </dependency>
@@ -35,7 +35,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.pandeyarun.user.info.InfoUser</mainClass>
+                            <mainClass>com.pandeyarun.info.InfoUser</mainClass>
                         </manifest>
                     </archive>
                     <outputDirectory>../libs</outputDirectory>

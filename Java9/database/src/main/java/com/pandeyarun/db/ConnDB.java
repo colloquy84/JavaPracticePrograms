@@ -25,13 +25,13 @@ public class ConnDB {
     private static final Object lock = new Object();
     private static Connection connection;
 
-    private static final Logger logger  = LogManager.getLogger(ConnDB.class);
+    private static final Logger logger = LogManager.getLogger(ConnDB.class);
 
-    public static ConnDB instance(){
+    public static ConnDB instance() {
 
-        if(Objects.isNull(instance)){
-            synchronized (lock){
-                if(Objects.isNull(instance))
+        if (Objects.isNull(instance)) {
+            synchronized (lock) {
+                if (Objects.isNull(instance))
                     instance = new ConnDB();
             }
         }
@@ -41,12 +41,11 @@ public class ConnDB {
     }
 
     /**
-     *
      * @return
      */
     public Connection getDBConnection() {
 
-        if(Objects.isNull(connection)){
+        if (Objects.isNull(connection)) {
 
             try {
                 Class.forName(DB_DRIVER);
@@ -66,7 +65,6 @@ public class ConnDB {
     }
 
     /**
-     *
      * @param user
      * @throws SQLException
      */
@@ -81,7 +79,7 @@ public class ConnDB {
             conn.setAutoCommit(false);
             stmt = conn.createStatement();
             createTable(stmt);
-            stmt.execute("INSERT INTO PERSON(id, firstname, lastname, profession, age) VALUES(null, '"
+            stmt.execute("INSERT INTO PERSON(id, firstname, lastname, profession, age) VALUES('" + user.getFirstName() + "', '"
                     + user.getFirstName() + "', '" + user.getLastName() + "', '" + user.getProfession() + "', " + user.getAge() + ")");
 
             logger.info("H2 Database inserted through Statement");
@@ -100,10 +98,9 @@ public class ConnDB {
     }
 
     /**
-     *
      * @return
      */
-    public List<String> getUsers(){
+    public List<String> getUsers() {
 
         List<String> result = new ArrayList<>();
 
@@ -112,26 +109,26 @@ public class ConnDB {
             Statement stmt = conn.createStatement();
             ResultSet rs = stmt.executeQuery("select * from PERSON");
             while (rs.next()) {
-                String info = "Id: " + rs.getInt("id") + " First Name: " + rs.getString("firstname")
+                String info = "Id: " + rs.getString("id") + " First Name: " + rs.getString("firstname")
                         + " Last Name: " + rs.getString("lastname") + " Profession: " + rs.getString("profession")
                         + " Age: " + rs.getInt("age");
                 result.add(info);
                 logger.info(info);
             }
-        } catch (Exception e){
+        } catch (Exception e) {
             logger.error(e);
         }
 
         return result;
     }
+
     /**
-     *
      * @param stmt
      */
-    private void createTable(Statement stmt){
+    private void createTable(Statement stmt) {
 
         try {
-            stmt.execute("CREATE TABLE IF NOT EXISTS PERSON(id int not null auto_increment primary key, firstname varchar(255), lastname varchar(255), " +
+            stmt.execute("CREATE TABLE IF NOT EXISTS PERSON(id varchar(255) not null primary key, firstname varchar(255), lastname varchar(255), " +
                     "profession varchar(255), age int)");
         } catch (SQLException e) {
             logger.error(e.getMessage());
