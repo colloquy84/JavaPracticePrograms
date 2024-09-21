@@ -1,4 +1,4 @@
-package com.pandeyar.thread;
+package com.pandeyar.concurrent.thread;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;

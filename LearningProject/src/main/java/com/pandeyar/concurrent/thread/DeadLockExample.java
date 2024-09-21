@@ -1,4 +1,4 @@
-package com.pandeyar.thread;
+package com.pandeyar.concurrent.thread;
 
 import java.util.Random;
 import java.util.concurrent.locks.Lock;

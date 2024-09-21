@@ -1,4 +1,4 @@
-package com.pandeyar.other;
+package com.pandeyar.datastructure.arrays;
 
 import java.util.Scanner;
 

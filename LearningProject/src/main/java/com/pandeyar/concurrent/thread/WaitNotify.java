@@ -1,4 +1,4 @@
-package com.pandeyar.thread;
+package com.pandeyar.concurrent.thread;
 import java.util.Scanner;
 
 public class WaitNotify {

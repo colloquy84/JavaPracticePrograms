@@ -1,4 +1,4 @@
-package com.pandeyar.thread;
+package com.pandeyar.concurrent.thread;
 
 public class SynchronizedDemo {
 	public static void main(String[] args) {
