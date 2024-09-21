@@ -11,7 +11,7 @@
 
     <modules>
         <module>Java9</module>
-        <module>SamplePrograms</module>
+        <module>LearningProject</module>
         <module>JavaVirtualThreads</module>
     </modules>
 
