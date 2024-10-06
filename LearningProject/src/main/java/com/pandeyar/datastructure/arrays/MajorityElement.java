@@ -2,7 +2,7 @@ package com.pandeyar.datastructure.arrays;
 
 
 /**
- * Find the element in the majority element in given array majority element is the element which appearsfloor(array length /2) times
+ * Find the element in the majority element in given array majority element is the element which appears floor(array length /2) times
  * <p>
  * This class uses Moor's voting algorithm
  */

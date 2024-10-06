@@ -1,7 +1,7 @@
 package com.pandeyar.datastructure.arrays;
 
 /**
- * This class demonstrates Kadan's algorithm to find the maximum sum of any sub array for the given array.
+ * This class demonstrates Kadane's algorithm to find the maximum sum of any sub array for the given array.
  */
 public class KadansAlgorithmForMaximumSubArraySum {
 
@@ -15,7 +15,7 @@ public class KadansAlgorithmForMaximumSubArraySum {
             currentSum += input[index];
             maxSum = Math.max(currentSum, maxSum);
 
-            //Kadans algorithm says if the sume is negative reset it to zero
+            //Kadans algorithm says if the sum is negative reset it to zero
             if (currentSum < 0) {
                 currentSum = 0;
             }
