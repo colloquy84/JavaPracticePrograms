@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 /**
  * Find the peak Index in a mountain array
  */
-public class FindPeakIndexInMountainArray {
+public class FindPeakInMountainArray {
 
     private static int findPeakIndexInMountainArray(int[] inputArray) {
         int start = 0;

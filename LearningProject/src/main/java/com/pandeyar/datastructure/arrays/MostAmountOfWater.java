@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
  * amount of water in it
  */
 
-public class ContainerWithMostAmountOfWater {
+public class MostAmountOfWater {
 
     public static int findMaxAmountOfWaterStoredInTheContainer(int[] arrayOfPossibleContainerWalls) {
         int containerVolume = 0;

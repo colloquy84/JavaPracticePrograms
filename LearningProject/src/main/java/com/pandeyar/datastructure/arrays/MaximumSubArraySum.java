@@ -3,7 +3,7 @@ package com.pandeyar.datastructure.arrays;
 /**
  * This class demonstrates Kadane's algorithm to find the maximum sum of any sub array for the given array.
  */
-public class KadansAlgorithmForMaximumSubArraySum {
+public class MaximumSubArraySum {
 
 
     public static void main(String[] args) {

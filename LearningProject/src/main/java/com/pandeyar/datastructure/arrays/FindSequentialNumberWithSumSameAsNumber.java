@@ -26,16 +26,16 @@ public class FindSequentialNumberWithSumSameAsNumber {
     }
 
     private static void printNumberAsSequentialNumber(int number) {
-        System.out.println("Below are the sereis of numbers less than " + number + " whose sum is same as " + number);
+        System.out.println("Below are the series of numbers less than " + number + " whose sum is same as " + number);
         int n = 2; // A sum can be represented in at least two numbers
         while (true) {
             double expressionForSeries = 2 * number + n - n * n;
             if (expressionForSeries <= 0) {
                 break;
             }
-            double firstNubmerInSeries = expressionForSeries / (2 * n);
-            int firstNumberInSeriesInInteger = (int) firstNubmerInSeries;
-            if (firstNumberInSeriesInInteger == firstNubmerInSeries) {
+            double firstNumberInSeries = expressionForSeries / (2 * n);
+            int firstNumberInSeriesInInteger = (int) firstNumberInSeries;
+            if (firstNumberInSeriesInInteger == firstNumberInSeries) {
                 printSequence(firstNumberInSeriesInInteger, n);
             }
             n = n + 1;

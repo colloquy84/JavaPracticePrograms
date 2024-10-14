@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
  * Calculate and return that minimum possible number.
  * Return -1 if a valid assignment is not possible.
  */
-public class BookAllocationProblem {
+public class BookAllocation {
 
     private static int allocateBooks(int[] inputArray, int n, int m) {
         if (m> n) {
