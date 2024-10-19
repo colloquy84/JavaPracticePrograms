@@ -3,7 +3,7 @@ package com.pandeyar.datastructure.sorting;
 public class SortArrayOfZeroOneAndTwos {
     public static void main(String[] args) {
         int[] arr = {2, 1, 1, 2, 1, 0, 1, 2, 0, 1};
-        System.out.print("Inout Array: ");
+        System.out.print("Input Array: ");
         printArray(arr);
         System.out.println();
         sortArrayOfZeroOneAndTwos(arr);
