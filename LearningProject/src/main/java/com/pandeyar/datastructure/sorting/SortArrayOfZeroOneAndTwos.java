@@ -1,5 +1,11 @@
 package com.pandeyar.datastructure.sorting;
 
+
+/***
+ *  This uses Dutch National Flag algorithm to sort the array which has elements of three unique types.
+ *
+ *
+ */
 public class SortArrayOfZeroOneAndTwos {
     public static void main(String[] args) {
         int[] arr = {2, 1, 1, 2, 1, 0, 1, 2, 0, 1};
@@ -26,7 +32,7 @@ public class SortArrayOfZeroOneAndTwos {
                 swap(arr, m, h);
                 h--;
             }
-            System.out.print("Iteration " + iterationCount + ": ");
+            System.out.print("Iteration " + iterationCount + ": " + ", l=" + l + ", m=" + m + ", h=" + h + " -> ");
             printArray(arr);
             iterationCount++;
         }

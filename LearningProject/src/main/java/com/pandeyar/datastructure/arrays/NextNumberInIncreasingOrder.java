@@ -1,6 +1,6 @@
 package com.pandeyar.datastructure.arrays;
 
-public class PossibleNumberInIncreasingOrder {
+public class NextNumberInIncreasingOrder {
 
     public static void main(String[] args) {
         int[] numberArray = {1, 2, 3, 4, 5};
