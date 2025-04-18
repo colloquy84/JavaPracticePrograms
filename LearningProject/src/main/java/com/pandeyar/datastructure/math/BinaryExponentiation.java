@@ -4,7 +4,6 @@ package com.pandeyar.datastructure.math;
  * This class calculates exponents of a number in log(n) complexity, it is doing that by converting exponent into binary form and multiplying only
  * when binary digit is 1.
  * So if qwe need to calculate 4 ^ 5 the convert 5 into binary which is 101, now generate the power using (1 * 4^1) * (0* 4^2) * (1 ^ 4^4) ... like that
- *
  */
 public class BinaryExponentiation {
 

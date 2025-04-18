@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
 public class BookAllocation {
 
     private static int allocateBooks(int[] inputArray, int n, int m) {
-        if (m> n) {
+        if (m > n) {
             return -1;
         }
 

@@ -10,7 +10,8 @@ public class User {
     private String profession;
     private int age;
 
-    public User(){}
+    public User() {
+    }
 
     public User(String firstName, String lastName, String profession, int age) {
         this.firstName = firstName;

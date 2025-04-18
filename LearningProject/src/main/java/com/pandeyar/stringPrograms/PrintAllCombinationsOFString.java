@@ -8,7 +8,7 @@ public class PrintAllCombinationsOFString {
 //        System.out.println("Enter a String  ");
         String str = "ARUN";//new Scanner(System.in).next();
         Set<String> stringSet = getASetWithAllCombinations(str);
-        System.out.println("ALL combinations of String "+str + " are as below");
+        System.out.println("ALL combinations of String " + str + " are as below");
         for (String combinations : stringSet) {
             System.out.print(combinations + " ");
         }

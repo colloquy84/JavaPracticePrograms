@@ -17,9 +17,9 @@ public class FileReadChallange {
     private final int BATCH_SIZE = 50;
     private final String POISON = "quit";
     private final ArrayBlockingQueue<List<String>> queue = new ArrayBlockingQueue<>(1000);
-    private int lineCount = 0;
     private final List<String> resultList = Collections.synchronizedList(new ArrayList<>());
     private final String SEARCH_STRING = "File";
+    private int lineCount = 0;
 
     public static void main(String[] args) throws IOException, InterruptedException {
         FileReadChallange m = new FileReadChallange();

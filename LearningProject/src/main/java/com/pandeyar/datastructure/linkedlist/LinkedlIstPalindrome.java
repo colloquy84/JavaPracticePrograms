@@ -5,15 +5,14 @@ import static com.pandeyar.datastructure.linkedlist.LinkedList.Node;
 
 public class LinkedlIstPalindrome {
 
-    public static Node findMiddleNode(Node head)
-    {
+    public static Node findMiddleNode(Node head) {
         // step 1
         Node slowPointer, fastPointer;
         slowPointer = fastPointer = head;
 
-        while(fastPointer !=null) {
+        while (fastPointer != null) {
             fastPointer = fastPointer.next;
-            if(fastPointer != null && fastPointer.next != null) {
+            if (fastPointer != null && fastPointer.next != null) {
                 slowPointer = slowPointer.next;
                 fastPointer = fastPointer.next;
             }
@@ -23,27 +22,22 @@ public class LinkedlIstPalindrome {
     }
 
     // Function to check if linked list is palindrome or not
-    public static boolean checkPalindrome (Node head)
-    {
+    public static boolean checkPalindrome(Node head) {
         // Find middle node using slow and fast pointer
-        Node middleNode=findMiddleNode(head);
+        Node middleNode = findMiddleNode(head);
         // we got head of second part
-        Node secondHead=middleNode.next;
+        Node secondHead = middleNode.next;
         // It is end of first part of linked list
-        middleNode.next=null;
+        middleNode.next = null;
         // get reversed linked list for second part
-        Node reverseSecondHead=ReverseLinkedListWithRecurrsion.reverseLinkedList(secondHead);
+        Node reverseSecondHead = ReverseLinkedListWithRecurrsion.reverseLinkedList(secondHead);
 
-        while(head!=null && reverseSecondHead!=null)
-        {
-            if(head.value==reverseSecondHead.value)
-            {
-                head=head.next;
-                reverseSecondHead=reverseSecondHead.next;
+        while (head != null && reverseSecondHead != null) {
+            if (head.value == reverseSecondHead.value) {
+                head = head.next;
+                reverseSecondHead = reverseSecondHead.next;
                 continue;
-            }
-            else
-            {
+            } else {
                 return false;
             }
         }
@@ -57,7 +51,7 @@ public class LinkedlIstPalindrome {
     public static void main(String[] args) {
         LinkedList list = new LinkedList();
         // Creating a linked list
-        Node head=new Node(1);
+        Node head = new Node(1);
         list.addToTheLast(head);
         list.addToTheLast(new Node(2));
         list.addToTheLast(new Node(1));
@@ -66,6 +60,6 @@ public class LinkedlIstPalindrome {
 
         list.printList(head);
 
-        System.out.println("Linked list palidrome: "+checkPalindrome(head));
+        System.out.println("Linked list palidrome: " + checkPalindrome(head));
     }
 }

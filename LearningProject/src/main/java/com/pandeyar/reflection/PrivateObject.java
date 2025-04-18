@@ -2,18 +2,18 @@ package com.pandeyar.reflection;
 
 public class PrivateObject {
 
-	  private String privateString = "ABC";
+    private String privateString = "ABC";
 
-	  private PrivateObject(String privateString) {
-	    this.privateString = privateString;
-	  }
-	  
-	  private PrivateObject(){
-		  
-	  }
+    private PrivateObject(String privateString) {
+        this.privateString = privateString;
+    }
 
-	  private String getPrivateString(){
-	    return this.privateString;
-	  }
-	}
+    private PrivateObject() {
+
+    }
+
+    private String getPrivateString() {
+        return this.privateString;
+    }
+}
 

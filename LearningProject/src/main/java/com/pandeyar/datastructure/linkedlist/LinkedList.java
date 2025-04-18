@@ -1,18 +1,8 @@
 package com.pandeyar.datastructure.linkedlist;
 
-public class LinkedList{
+public class LinkedList {
 
     private Node head;
-
-    public static class Node {
-        protected int value;
-        protected Node next;
-
-        Node(int value) {
-            this.value = value;
-
-        }
-    }
 
     public void addToTheLast(Node node) {
 
@@ -27,7 +17,6 @@ public class LinkedList{
         }
     }
 
-
     public void printList(Node head) {
         Node temp = head;
         while (temp != null) {
@@ -35,6 +24,16 @@ public class LinkedList{
             temp = temp.next;
         }
         System.out.println();
+    }
+
+    public static class Node {
+        protected int value;
+        protected Node next;
+
+        Node(int value) {
+            this.value = value;
+
+        }
     }
 
 }

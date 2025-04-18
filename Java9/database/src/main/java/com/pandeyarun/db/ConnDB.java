@@ -20,12 +20,10 @@ public class ConnDB {
     private static final String DB_CONNECTION_STRING = "jdbc:h2:~/" + DB_NAME;
     private static final String DB_USER = "";
     private static final String DB_PASSWORD = "";
-
-    private static ConnDB instance = null;
     private static final Object lock = new Object();
-    private static Connection connection;
-
     private static final Logger logger = LogManager.getLogger(ConnDB.class);
+    private static ConnDB instance = null;
+    private static Connection connection;
 
     public static ConnDB instance() {
 

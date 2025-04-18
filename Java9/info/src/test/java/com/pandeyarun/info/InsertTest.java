@@ -14,7 +14,7 @@ import static org.junit.Assert.assertEquals;
 public class InsertTest {
 
     @Test
-    public void insert(){
+    public void insert() {
         ConnDB.instance().insertWithStatement(new User("Arun", "Pandey",
                 "Expert Software Consultant", 33));
         List<String> result = ConnDB.instance().getUsers();

@@ -1,5 +1,5 @@
 package com.pandeyar.generics;
 
-public class Child extends Parent{
+public class Child extends Parent {
 
 }

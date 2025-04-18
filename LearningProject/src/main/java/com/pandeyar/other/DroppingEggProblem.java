@@ -93,15 +93,15 @@ public class DroppingEggProblem {
                 + n + " eggs and " + k
                 + " floors using recursion is " + eggDrop(n, k));
         Duration duration = Duration.between(start, Instant.now());
-        System.out.println("Time taken with recursion in nano seconds "+ duration.getNano()+"\n");
+        System.out.println("Time taken with recursion in nano seconds " + duration.getNano() + "\n");
 
-         start = Instant.now();
+        start = Instant.now();
         System.out.println("Minimum number of "
                 + "trials in worst case with "
                 + n + " eggs and " + k
                 + " floors using dynamic programing is " + eggDropWithDynamicProgramming(n, k));
-         duration = Duration.between(start, Instant.now());
-        System.out.println("Time taken with Dynamic Programing in nano seconds "+ duration.getNano());
+        duration = Duration.between(start, Instant.now());
+        System.out.println("Time taken with Dynamic Programing in nano seconds " + duration.getNano());
     }
     // This code is contributed by Ryuga.
 }

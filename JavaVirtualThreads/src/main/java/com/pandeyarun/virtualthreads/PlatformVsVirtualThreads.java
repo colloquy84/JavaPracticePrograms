@@ -9,7 +9,7 @@ public class PlatformVsVirtualThreads {
             double i = random.nextDouble(1000) % random.nextDouble(1000);
         };
         usePlatformThreads(runnable, 50_000);
-        useVirtualThreads(runnable,1_000_000);
+        useVirtualThreads(runnable, 1_000_000);
     }
 
     private static void useVirtualThreads(Runnable runnable, int iterations) {

@@ -16,7 +16,7 @@ public class ReverseLinkedListWithRecurrsion {
     public static void main(String[] args) {
         LinkedList list = new LinkedList();
         // Creating a linked list
-        LinkedList.Node head=new LinkedList.Node(5);
+        LinkedList.Node head = new LinkedList.Node(5);
         list.addToTheLast(head);
         list.addToTheLast(new LinkedList.Node(6));
         list.addToTheLast(new LinkedList.Node(7));
@@ -25,7 +25,7 @@ public class ReverseLinkedListWithRecurrsion {
 
         list.printList(head);
         //Reversing LinkedList
-        LinkedList.Node reverseHead=reverseLinkedList(head);
+        LinkedList.Node reverseHead = reverseLinkedList(head);
         System.out.println("After reversing");
         list.printList(reverseHead);
 

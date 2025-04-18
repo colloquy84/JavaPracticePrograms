@@ -7,70 +7,22 @@ import java.util.Queue;
 
 public class BreadthFirstSearchExampleNeighbourList {
 
+    static ArrayList<Node> nodes = new ArrayList<Node>();
     private final Queue<Node> queue;
-    static ArrayList<Node> nodes=new ArrayList<Node>();
-    static class Node
-    {
-        int data;
-        boolean visited;
-        List<Node> neighbours;
 
-        Node(int data)
-        {
-            this.data=data;
-            this.neighbours=new ArrayList<>();
-
-        }
-        public void addneighbours(Node neighbourNode)
-        {
-            this.neighbours.add(neighbourNode);
-        }
-        public List<Node> getNeighbours() {
-            return neighbours;
-        }
-        public void setNeighbours(List<Node> neighbours) {
-            this.neighbours = neighbours;
-        }
-    }
-
-    public BreadthFirstSearchExampleNeighbourList()
-    {
+    public BreadthFirstSearchExampleNeighbourList() {
         queue = new LinkedList<>();
     }
 
-    public void bfs(Node node)
-    {
-        queue.add(node);
-        node.visited=true;
-        while (!queue.isEmpty())
-        {
+    public static void main(String[] arg) {
 
-            Node element=queue.remove();
-            System.out.print(element.data + "t");
-            List<Node> neighbours=element.getNeighbours();
-            for (int i = 0; i < neighbours.size(); i++) {
-                Node n=neighbours.get(i);
-                if(n!=null && !n.visited)
-                {
-                    queue.add(n);
-                    n.visited=true;
-
-                }
-            }
-
-        }
-    }
-
-    public static void main(String[] arg)
-    {
-
-        Node node40 =new Node(40);
-        Node node10 =new Node(10);
-        Node node20 =new Node(20);
-        Node node30 =new Node(30);
-        Node node60 =new Node(60);
-        Node node50 =new Node(50);
-        Node node70 =new Node(70);
+        Node node40 = new Node(40);
+        Node node10 = new Node(10);
+        Node node20 = new Node(20);
+        Node node30 = new Node(30);
+        Node node60 = new Node(60);
+        Node node50 = new Node(50);
+        Node node70 = new Node(70);
 
         node40.addneighbours(node10);
         node40.addneighbours(node20);
@@ -86,5 +38,49 @@ public class BreadthFirstSearchExampleNeighbourList {
         BreadthFirstSearchExampleNeighbourList bfsExample = new BreadthFirstSearchExampleNeighbourList();
         bfsExample.bfs(node40);
 
+    }
+
+    public void bfs(Node node) {
+        queue.add(node);
+        node.visited = true;
+        while (!queue.isEmpty()) {
+
+            Node element = queue.remove();
+            System.out.print(element.data + "t");
+            List<Node> neighbours = element.getNeighbours();
+            for (int i = 0; i < neighbours.size(); i++) {
+                Node n = neighbours.get(i);
+                if (n != null && !n.visited) {
+                    queue.add(n);
+                    n.visited = true;
+
+                }
+            }
+
+        }
+    }
+
+    static class Node {
+        int data;
+        boolean visited;
+        List<Node> neighbours;
+
+        Node(int data) {
+            this.data = data;
+            this.neighbours = new ArrayList<>();
+
+        }
+
+        public void addneighbours(Node neighbourNode) {
+            this.neighbours.add(neighbourNode);
+        }
+
+        public List<Node> getNeighbours() {
+            return neighbours;
+        }
+
+        public void setNeighbours(List<Node> neighbours) {
+            this.neighbours = neighbours;
+        }
     }
 }

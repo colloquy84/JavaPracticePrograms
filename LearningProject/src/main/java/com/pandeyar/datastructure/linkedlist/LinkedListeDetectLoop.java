@@ -27,11 +27,11 @@ public class LinkedListeDetectLoop {
 
     }
 
-    private static void noLoopExists(){
+    private static void noLoopExists() {
         LinkedList list = new LinkedList();
         // Creating a linked list
 
-        Node head=new Node(5);
+        Node head = new Node(5);
         list.addToTheLast(head);
         list.addToTheLast(new Node(6));
         list.addToTheLast(new Node(7));
@@ -45,11 +45,11 @@ public class LinkedListeDetectLoop {
         System.out.println("Loop existed-->" + ifLoopExists(head));
     }
 
-    private static void loopExists(){
+    private static void loopExists() {
         LinkedList list = new LinkedList();
         // Creating a linked list
-        Node loopNode=new Node(7);
-        Node head=new Node(5);
+        Node loopNode = new Node(7);
+        Node head = new Node(5);
         list.addToTheLast(head);
         list.addToTheLast(new Node(6));
         list.addToTheLast(loopNode);

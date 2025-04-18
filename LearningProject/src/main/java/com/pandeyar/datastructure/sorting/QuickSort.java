@@ -26,7 +26,7 @@ public class QuickSort {
 
     private static void quickSort(int left, int right) {
 
-        if(left >= right){
+        if (left >= right) {
             return;
         }
         // find pivot number, we will take it as last element
@@ -35,12 +35,12 @@ public class QuickSort {
 
         int pivotPosition = partition(left, right, pivot);
         // call quickSort() method recursively
-        quickSort(left, pivotPosition-1);
-        quickSort(pivotPosition+1, right);
+        quickSort(left, pivotPosition - 1);
+        quickSort(pivotPosition + 1, right);
     }
 
-    public static int partition(int left, int right, int pivot){
-        int leftPointer = left -1;
+    public static int partition(int left, int right, int pivot) {
+        int leftPointer = left - 1;
         int rightPointer = right;
         while (leftPointer <= rightPointer) {
             /**

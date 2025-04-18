@@ -10,10 +10,10 @@ public class PrintAllCombinationsOfStrinagdAndItsSubstrings {
         Set<String> stringSet = PrintAllSubstringOFString.getASetWithAllSubstrings(str);
         System.out.println("ALL combinations of String " + str + " and all its substrings are as below");
         for (String substring : stringSet) {
-            System.out.println("Substring: "+substring);
+            System.out.println("Substring: " + substring);
             System.out.print("Combinations: ");
             Set<String> combinationsSet = PrintAllCombinationsOFString.getASetWithAllCombinations(substring);
-            for (String combination : combinationsSet){
+            for (String combination : combinationsSet) {
                 System.out.print(combination + " ");
             }
             System.out.println("\n===========================\n");

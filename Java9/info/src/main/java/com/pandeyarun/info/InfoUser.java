@@ -11,7 +11,8 @@ import org.apache.logging.log4j.Logger;
 public class InfoUser {
 
     private static final Logger logger = LogManager.getLogger(InfoUser.class);
-    public static void main(String[] args){
+
+    public static void main(String[] args) {
 
         User user = new User("Arun", "Pandey", "Expert Software Consultant", 33);
         logger.info(user.toString());

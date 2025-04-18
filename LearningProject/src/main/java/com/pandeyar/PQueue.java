@@ -1,31 +1,31 @@
 package com.pandeyar;
 
-public class PQueue{
+public class PQueue {
     protected Object[] array;
-    protected int start,end;
+    protected int start, end;
     protected boolean full;
 
-    public PQueue(int maxsize){
+    public PQueue(int maxsize) {
         array = new Object[maxsize];
         start = end = 0;
         full = false;
     }
 
-    public boolean isEmpty(){
+    public boolean isEmpty() {
         return ((start == end) && !full);
     }
 
-    public void insert(Object o){
-        if(!full)
+    public void insert(Object o) {
+        if (!full)
             array[start = (++start % array.length)] = o;
-        if(start == end)
+        if (start == end)
             full = true;
     }
 
-    public Object remove(){
-        if(full)
+    public Object remove() {
+        if (full)
             full = false;
-        else if(isEmpty())
+        else if (isEmpty())
             return null;
         return array[end = (++end % array.length)];
     }
